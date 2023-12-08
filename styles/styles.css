@@ -86,7 +86,7 @@ html {
 
 /* Projects */
 
-#projects {
+/* #projects {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,6 +110,114 @@ html {
 
 #projects a:visited, a:active {
     color: azure;
+} */
+
+#projects {
+    background-color: rgb(42, 90, 179);
+    width: 100%;
+    height: 100vh;
+}
+
+.project-content {
+    padding: 5rem 1.5rem 4rem;
+    min-height: calc(100vh - 40px);
+    background-color: rgb(42, 90, 179);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#projects h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: azure;
+    text-align: center;
+    padding-top: 25px;
+}
+
+#tile-container {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem 1rem;
+}
+
+.project-tile {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: transform .5s;
+}
+
+.project-tile:hover {
+    transform: translateY(-5px);
+}
+
+.project-tile img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-tile a {
+    display: block;
+    color: azure;
+    text-decoration: none;
+    max-width: 350px;
+    text-align: center;
+}
+
+.project-tile:hover a {
+    text-decoration: underline;
+}
+
+/* .project-tile:hover a::before {
+    display: inline-block;
+    content: "< ";
+    width: 25px;
+}
+
+.project-tile:hover a::after {
+    display: inline-block;
+    text-align: right;
+    content: " />";
+    width: 25px;
+} */
+
+.project-content > a {
+    font-size: 1.4rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0;
+    border: none;
+    color: inherit;
+    background: #393e46;
+    border: 2px solid #222831;
+    transition: background 500ms;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.project-content > a:hover {
+    background: #222831;
+    opacity: 0.75;
+}
+
+.project-content > a:hover::after {
+    display: inline-block;
+    text-align: right;
+    content: " >";
+    width: 22px;
+}
+
+@media screen and (max-width: 650px) {
+    .project-content > div {
+      grid-template-columns: 1fr;
+    }
 }
 
 /* Contact */
